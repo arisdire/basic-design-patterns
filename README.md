@@ -1,11 +1,13 @@
-# Design Patterns
+# Basic Design Patterns
+
+Basic design pattern examples in JavaScript.
 
 ## Table of Contents
 
 1. [Builder](#builder-pattern)
-1. [Protoype](#prototype-pattern)
 1. [Facade](#facade-pattern)
 1. [Factory Method](#factory-method-pattern)
+1. [Protoype](#prototype-pattern)
 1. [Singleton](#singleton-pattern)
 
 ## Builder Pattern
@@ -85,49 +87,13 @@ console.log(car.toString());
 2. **Separation of Concerns:** The builder pattern separates the construction of a complex object (`Car`) from its representation, allowing the same construction process to create various representations.
 3. **Immutability:** Once a `Car` object is created, its properties are immutable (cannot be changed), ensuring the integrity of the object.
 
-This code is a good example of the Builder pattern, which is useful for constructing complex objects with many optional parameters.
+The Builder pattern is useful for constructing complex objects with many optional parameters.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
-
-## Prototype Pattern
-
-Specify the kinds of objects to create using a prototypical instance, and create new objects from the "skeleton" of an existing object, thus boosting performance and keeping memory footprints to a minimum.
-
-```js
-// Define a constructor function
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
-
-// Add a method to the prototype
-Person.prototype.greet = function () {
-  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-};
-
-// Create instances
-const person1 = new Person("Alice", 30);
-const person2 = new Person("Bob", 25);
-
-// Call the method
-person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
-person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
-```
-
-### Summary
-
-1. **Constructor Function:** Person is a constructor function used to create new objects with name and age properties.
-2. **Prototype Method:** The greet method is added to `Person.prototype`, so all instances of `Person` can use this method without duplicating it for each instance.
-3. **Instance Creation:** `person1` and `person2` are instances of `Person`, created using the `new` keyword.
-4. **Method Invocation:** The greet method is called on each instance, demonstrating how each instance can access shared methods.
-
-This approach leverages JavaScript's prototypal inheritance to efficiently manage memory and performance.
-
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[Back to top](#table-of-contents)</sup>
 
 ## Facade Pattern
 
-Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+The Facade pattern provides a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use.
 
 ```js
 // Subsystem 1: CPU class with methods to freeze, jump to a position, and execute instructions
@@ -196,25 +162,23 @@ computer.start();
 
 **Subsystem Classes:**
 
-- CPU: Represents the CPU with methods to freeze, jump to a memory position, and execute instructions.
-- Memory: Represents the memory with a method to load data at a specific position.
-- HardDrive: Represents the hard drive with a method to read data from a specific Logical Block Addressing (LBA).
+- **`CPU`:** Represents the CPU with methods to freeze, jump to a memory position, and execute instructions.
+- **`Memory`:** Represents the memory with a method to load data at a specific position.
+- **`HardDrive`:** Represents the hard drive with a method to read data from a specific Logical Block Addressing (LBA).
 
 **Facade Class:**
 
-- ComputerFacade: Simplifies the interaction with the subsystems by providing a higher-level interface. It initializes instances of the CPU, Memory, and HardDrive classes and provides a `start` method to coordinate their actions.
+- **ComputerFacade:** Simplifies the interaction with the subsystems by providing a higher-level interface. It initializes instances of the `CPU`, `Memory`, and `HardDrive` classes and provides a `start` method to coordinate their actions.
 
 **Client Code:**
 
-- Creates an instance of `ComputerFacade` and calls the start method to start the computer, which internally coordinates the actions of the CPU, Memory, and HardDrive subsystems.
+- Creates an instance of `ComputerFacade` and calls the `start` method to start the computer, which internally coordinates the actions of the `CPU`, `Memory`, and `HardDrive` subsystems.
 
-This pattern is known as the Facade pattern, which provides a unified interface to a set of interfaces in a subsystem, making it easier to use.
-
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[Back to top](#table-of-contents)</sup>
 
 ## Factory Method Pattern
 
-Factory Method lets a class defer instantiation to subclasses. It define an interface for creating a single object, but let subclasses decide which class to instantiate.
+Factory Method lets a class defer instantiation to subclasses. It defines an interface for creating a single object, but lets subclasses decide which class to instantiate.
 
 ```js
 // Class for Car
@@ -225,10 +189,11 @@ class Car {
     this.color = color;
   }
 }
+```
 
-// The Car class initializes a car object with properties doors, state, and color.
-// Default values are provided using destructuring and default parameters.
+The `Car` class initializes a car object with properties `doors`, `state`, and `color`. Default values are provided using destructuring and default parameters.
 
+```js
 // Class for Truck
 class Truck {
   constructor({ doors = 2, state = "used", color = "blue" } = {}) {
@@ -237,10 +202,11 @@ class Truck {
     this.color = color;
   }
 }
+```
 
-// Similar to the Car class, the Truck class initializes a truck object with properties doors, state, and color.
-// Default values are also provided using destructuring and default parameters.
+Similar to the `Car` class, the `Truck` class initializes a truck object with properties `doors`, `state`, and `color`. Default values are also provided using destructuring and default parameters.
 
+```js
 // Factory class
 class VehicleFactory {
   // Method to create a vehicle based on the provided options
@@ -296,7 +262,41 @@ const truck = factory.createVehicle({
 - The `createVehicle` method is called with specific options to create a `Car` and a `Truck`.
 - The created car and truck objects have the specified properties.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[Back to top](#table-of-contents)</sup>
+
+## Prototype Pattern
+
+The Prototype pattern is used to create objects based on a template of an existing object through cloning. It's useful for defining methods and properties that should be shared across all instances of a particular type, promoting efficient memory usage and consistent behavior.
+
+```js
+// Define a constructor function
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Add a method to the prototype
+Person.prototype.greet = function () {
+  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+};
+
+// Create instances
+const person1 = new Person("Alice", 30);
+const person2 = new Person("Bob", 25);
+
+// Call the method
+person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
+```
+
+### Summary
+
+1. **Constructor Function:** `Person` is a constructor function used to create new objects with `name` and `age` properties.
+2. **Prototype Method:** The `greet` method is added to `Person.prototype`, so all instances of `Person` can use this method without duplicating it for each instance.
+3. **Instance Creation:** `person1` and `person2` are instances of `Person`, created using the `new` keyword.
+4. **Method Invocation:** The `greet` method is called on each instance, demonstrating how each instance can access shared methods.
+
+<sup>[Back to top](#table-of-contents)</sup>
 
 ## Singleton Pattern
 
@@ -358,14 +358,12 @@ instance1.someMethod(); // Singleton method called
 
 **Method Call:**
 
-- `instance1.someMethod()`: Calls the someMethod on the singleton instance, logging "Singleton method called" to the console.
+- `instance1.someMethod()`: Calls the `someMethod` on the singleton instance, logging "Singleton method called" to the console.
 
 ### Summary
 
-- The Singleton pattern ensures that only one instance of the Singleton class is created.
+- The Singleton pattern ensures that only one instance of the `Singleton` class is created.
 - Any subsequent attempts to create a new instance will return the already existing instance.
 - This pattern is useful for managing shared resources or coordinating actions across a system.
 
-This code effectively demonstrates the Singleton pattern in JavaScript.
-
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[Back to top](#table-of-contents)</sup>
