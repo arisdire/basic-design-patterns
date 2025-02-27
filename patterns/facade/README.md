@@ -81,3 +81,7 @@ computer.start();
 ```
 
 - Creates an instance of `ComputerFacade` and calls the `start` method to start the computer, which internally coordinates the actions of the `CPU`, `Memory`, and `HardDrive` subsystems.
+
+### Summary
+
+The Facade pattern helps in reducing the complexity of the code and makes the system easier to use and understand by providing a single entry point to various subsystems.

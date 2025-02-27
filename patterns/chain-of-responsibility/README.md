@@ -1,4 +1,4 @@
-# Chain-of-responsibility Pattern
+# Chain-of-Responsibility Pattern
 
 The Chain-of-Responsibility pattern allows for flexible and scalable handling of requests. The following code implements a simple example of the pattern in JavaScript to simulate an ATM dispensing different denominations of bills
 

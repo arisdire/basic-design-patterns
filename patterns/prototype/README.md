@@ -25,7 +25,4 @@ person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
 
 ### Summary
 
-1. **Constructor Function:** `Person` is a constructor function used to create new objects with `name` and `age` properties.
-2. **Prototype Method:** The `greet` method is added to `Person.prototype`, so all instances of `Person` can use this method without duplicating it for each instance.
-3. **Instance Creation:** `person1` and `person2` are instances of `Person`, created using the `new` keyword.
-4. **Method Invocation:** The `greet` method is called on each instance, demonstrating how each instance can access shared methods.
+The Prototype pattern is particularly useful in scenarios where object creation is resource-intensive or when you need to ensure uniform behavior across multiple instances.

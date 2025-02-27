@@ -80,6 +80,4 @@ const truck = factory.createVehicle({
 
 ### Summary
 
-- An instance of `VehicleFactory` is created.
-- The `createVehicle` method is called with specific options to create a `Car` and a `Truck`.
-- The created car and truck objects have the specified properties.
+This pattern allows the instantiation logic to be deferred to subclasses, promoting flexibility and scalability in object creation.

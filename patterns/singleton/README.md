@@ -62,6 +62,4 @@ instance1.someMethod(); // Singleton method called
 
 ### Summary
 
-- The Singleton pattern ensures that only one instance of the `Singleton` class is created.
-- Any subsequent attempts to create a new instance will return the already existing instance.
-- This pattern is useful for managing shared resources or coordinating actions across a system.
+The Singleton pattern is useful for ensuring that a class has only one instance and provides a global point of access to that instance. This is particularlly beneficial in scenarios where a single shared resource is needed througout an application. By controlling the instantiation process, the Singleton pattern helps manage resources efficiently and ensures consistent behavior across the application.

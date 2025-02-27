@@ -57,22 +57,25 @@ class CarBuilder {
 
 This example demonstrates how to use the `CarBuilder` class to create a `Car` object.
 
-```js
-// Usage example
-const car = new CarBuilder("Toyota", "Camry")
-  .setYear(2021) // Setting the year
-  .setColor("Red") // Setting the color
-  .setEngine("V6") // Setting the engine type
-  .build(); // Building the car
-
-// Output the car details
-console.log(car.toString());
-```
-
 ### Explaining the code
 
 1. **Fluent Interface:** The `CarBuilder` class uses a fluent interface, allowing method chaining. Each setter method returns the builder object itself (`this`), enabling chaining multiple method calls in a single statement.
 2. **Separation of Concerns:** The builder pattern separates the construction of a complex object (`Car`) from its representation, allowing the same construction process to create various representations.
 3. **Immutability:** Once a `Car` object is created, its properties are immutable (cannot be changed), ensuring the integrity of the object.
 
-The Builder pattern is useful for constructing complex objects with many optional parameters.
+### Usage
+
+```js
+const car = new CarBuilder("Toyota", "Camry")
+  .setYear(2021)
+  .setColor("Red")
+  .setEngine("V6")
+  .build();
+
+// Output the car details
+console.log(car.toString());
+```
+
+### Summary
+
+In this example, the `Product` class is constructed using the `Builder` class. The `Builder` class provides methods to set optional parameters and a `build()` method to create the `Project` object. The Builder pattern is useful for constructing complex objects with many optional parameters.
