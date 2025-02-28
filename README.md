@@ -1,8 +1,11 @@
 # Basic Design Patterns
 
-Basic design pattern examples in software development that includes examples and explanations of common design patterns such as Singleton, Factory Method, Observer, and more. The goal is to help developers understand and implement these patterns to write more efficient and maintainable code.
+A collection of essential design patterns for software development using practical examples, such Singleton, Factory Method, Observer, and more.
 
-## Table of Contents
+> [!TIP]
+> This information is meant to help developers understand and implement these patterns to write more efficient and maintainable code.
+
+## Patterns
 
 ### Creational
 
