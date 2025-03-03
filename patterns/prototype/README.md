@@ -17,11 +17,30 @@ Person.prototype.greet = function () {
 // Create instances
 const person1 = new Person("Alice", 30);
 const person2 = new Person("Bob", 25);
+```
 
-// Call the method
+### Explaining the code
+
+1. **Constructor Function:**
+
+   - The `Person` function is a constructor that initializes new objects with `name` and `age` properties.
+
+2. **Prototype Method:**
+
+   - The `greet` method is added to the `Person.prototype`. This means that all instances of `Person` will share this method, rather than each instance having its own copy. This promotes memory efficiency.
+
+3. **Instance Creation:**
+
+   - Two instances of `Person` are created using the `new` keyword. `person1` and `person2` are objects with their own `name` and `age` properties.
+
+### Usage
+
+```js
 person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
 person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
 ```
+
+- The `greet` method is called on each instance, demonstrating that each instance can access the shared method and use its own properties.
 
 ### Summary
 
