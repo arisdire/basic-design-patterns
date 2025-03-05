@@ -2,6 +2,8 @@
 
 The Strategy pattern allows you to define a family of algorithms, encapsulate each one as a class, and make them interchangeable. This pattern lets the algorithm vary independently from the clients that use it.
 
+### Example
+
 ```js
 // Strategy interface
 class Strategy {

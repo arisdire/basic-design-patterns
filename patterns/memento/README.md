@@ -2,6 +2,8 @@
 
 The Memento pattern is used to capture and externalize an object's internal state so that it can be restored later without violating encapsulation. This is useful for implementing features like undo/redo functionality.
 
+### Example
+
 ```js
 class Memento {
   constructor(state) {

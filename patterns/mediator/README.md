@@ -2,6 +2,8 @@
 
 The Mediator pattern is used to reduce the complexity of communication between multiple objects or classes. Instead of having objects communicate directly with each other, they communicate through a mediator object.
 
+### Example
+
 ```js
 class Mediator {
   constructor() {

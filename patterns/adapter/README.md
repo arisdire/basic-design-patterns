@@ -2,6 +2,8 @@
 
 The Adapter pattern allows incompatible interfaces to work together by providing a wrapper that translates calls from one interface to another.
 
+### Example
+
 ```js
 // Old interface
 class OldCalculator {

@@ -2,6 +2,8 @@
 
 The Proxy pattern is used to control access to an object by placing a surrogate or placeholder object (the proxy) in front of the real object (the real subject).
 
+### Example
+
 ```js
 class RealSubject {
   request() {

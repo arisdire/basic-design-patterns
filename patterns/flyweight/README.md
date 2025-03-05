@@ -2,6 +2,8 @@
 
 The Flyweight pattern is used to minimize memory usage by sharing as much data as possible with similar objects.
 
+### Example
+
 ```js
 class Flyweight {
   constructor(make, model, processor) {

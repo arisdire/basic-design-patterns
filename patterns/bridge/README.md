@@ -2,6 +2,8 @@
 
 The Bridge pattern is used to separate an abstraction from its implementation, allowing them to vary independently. Here's a breakdown of the key components:
 
+### Example
+
 ```js
 // Abstraction
 class RemoteControl {

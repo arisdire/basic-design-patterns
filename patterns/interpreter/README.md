@@ -2,6 +2,8 @@
 
 The Interpreter pattern is used to define a grammatical representation for a language and an interpreter to interpret sentences in that language.
 
+### Example
+
 ```js
 class Context {
   constructor(input) {

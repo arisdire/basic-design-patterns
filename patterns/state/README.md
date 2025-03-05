@@ -2,6 +2,8 @@
 
 The State pattern allows an object to change its behavior when its internal state changes. It is particularly useful for implementing state machines or managing state-dependent behavior.
 
+### Example
+
 ```js
 // State interface
 class State {

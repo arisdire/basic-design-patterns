@@ -2,6 +2,8 @@
 
 The Decorator pattern allows behavior to be added to individual objects, dynamically, without affecting the behavior of other objects from the same class.
 
+### Example
+
 ```js
 // Base component
 class Coffee {

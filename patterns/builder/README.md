@@ -2,6 +2,8 @@
 
 The Builder pattern separates the construction of a complex object from its representation. This allows the same construction process to create different representations of the object.
 
+### Example
+
 ```js
 // The Car class represents a car with various properties such as make, model, year, color, and engine. It uses a builder object to initialize these properties.
 class Car {
@@ -54,8 +56,6 @@ class CarBuilder {
   }
 }
 ```
-
-This example demonstrates how to use the `CarBuilder` class to create a `Car` object.
 
 ### Explaining the code
 
