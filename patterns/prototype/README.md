@@ -2,6 +2,8 @@
 
 The Prototype pattern is used to create objects based on a template of an existing object through cloning. It's useful for defining methods and properties that should be shared across all instances of a particular type, promoting efficient memory usage and consistent behavior.
 
+### Example
+
 ```js
 // Define a constructor function
 function Person(name, age) {

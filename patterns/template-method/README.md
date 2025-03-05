@@ -2,6 +2,8 @@
 
 The Template Method pattern is a behavioral design pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It allows subclasses to redefine certain steps of an algorithm without changing the algorithm's structure.
 
+### Example
+
 ```js
 class DataProcessor {
   process() {

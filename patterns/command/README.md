@@ -2,6 +2,8 @@
 
 The Command pattern is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation allows for parameterizing methods with different requests, delaying or queuing a request's execution, and supporting undoable operations.
 
+### Example
+
 ```js
 // Command Interface
 class Command {

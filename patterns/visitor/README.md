@@ -2,6 +2,8 @@
 
 The Visitor pattern allows you to add further operations to objects without having to modify them. It separates an algorithm from the object structure on which it operates.
 
+### Example
+
 ```js
 // Visitor Interface
 class Visitor {

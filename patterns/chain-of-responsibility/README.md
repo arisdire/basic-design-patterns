@@ -2,6 +2,8 @@
 
 The Chain-of-Responsibility pattern allows for flexible and scalable handling of requests. The following code implements a simple example of the pattern in JavaScript to simulate an ATM dispensing different denominations of bills
 
+### Example
+
 ```js
 class Request {
   constructor(amount) {

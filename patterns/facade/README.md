@@ -2,6 +2,8 @@
 
 The Facade pattern provides a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use.
 
+### Example
+
 ```js
 // Subsystem 1: CPU class with methods to freeze, jump to a position, and execute instructions
 class CPU {

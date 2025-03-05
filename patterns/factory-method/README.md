@@ -2,6 +2,8 @@
 
 The Factory Method pattern lets a class defer instantiation to subclasses. It defines an interface for creating a single object, but lets subclasses decide which class to instantiate.
 
+### Example
+
 ```js
 // Class for Car
 class Car {

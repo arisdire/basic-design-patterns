@@ -2,6 +2,8 @@
 
 The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. This is useful when exactly one object is needed to coordinate actions across the system.
 
+### Example
+
 ```js
 class Singleton {
   // Constructor function for the Singleton class
@@ -33,6 +35,8 @@ class Singleton {
 - `return Singleton.instance`: The constructor returns the single instance of the class.
 
 **Method:** The `someMethod` is a simple method that logs a message to the console.
+
+### Usage
 
 ```js
 // Create the first instance of the Singleton class
