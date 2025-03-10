@@ -67,7 +67,7 @@ class Caretaker {
    - **Purpose:** Creates and stores states in `Memento` objects.
    - **Constructor:** Initializes the `state` to an empty string.
    - **`setState(state)`:** Sets the current state and logs it.
-   - **`saveStateToMemento()`:** Creates a new Memento with the current state.
+   - **`saveStateToMemento()`:** Creates a new `Memento` with the current state.
    - **`getStateFromMemento(memento)`:** Restores the state from a given `Memento` and logs it.
 
 3. **Caretaker**
