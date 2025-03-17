@@ -9,7 +9,7 @@ Una colección de patrones de diseño esenciales para el desarrollo de software 
 
 ### Creacionales
 
-1. [Abstract Factory](/patterns/abstract-factory/README.md)
+1. [Abstract Factory](/patterns/abstract-factory/README_es.md)
 1. [Builder](/patterns/builder/README.md)
 1. [Factory Method](/patterns/factory-method/README.md)
 1. [Prototype](/patterns/prototype/README.md)
